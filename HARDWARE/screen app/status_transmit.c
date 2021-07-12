@@ -115,6 +115,8 @@ void Init_To_Auto2(void)
 	Yaw_Angle(0);
 	xiangzuo = 1;
 	
+	yaw_angle_now = 0;
+	
 }
 
 

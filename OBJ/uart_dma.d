@@ -98,6 +98,8 @@
 ..\obj\uart_dma.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\uart_dma.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\uart_dma.o: ..\HARDWARE\SENSER\senser.h
+..\obj\uart_dma.o: ..\HARDWARE\stack\stack.h
 ..\obj\uart_dma.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\uart_dma.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\uart_dma.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\uart_dma.o: ..\HARDWARE\uart\numandstr.h

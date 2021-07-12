@@ -27,6 +27,7 @@ void Pitch_Angle(uint8_t angle)
 }
 
 
+/* MANUAL模式要执行的动作 */
 void MANUAL_Action(void)
 {
 	Yaw_Angle(manual_angle);
@@ -34,25 +35,17 @@ void MANUAL_Action(void)
 
 
 
+/* AUTO1模式要执行的动作 */
 void AUTO1_Action(void)
 {
-	get_icm20602_accdata_spi();
-	get_icm20602_gyro_spi();
-	IMU_quaterToEulerianAngles();  /* 获取欧拉角 */
-	//printf("%.2f,%.2f,%.2f\n", eulerAngle.pitch, eulerAngle.roll, eulerAngle.yaw);
-	//printf("%.2f,%.2f,%.2f\n\n", values[0], values[1], values[2]);
+	
 	HAL_Delay(20);
-	
-	
-	//get_distance_flag = 1;  /* 获取距离 */
-	
-	
-	
-	/* track_flag等于0代表找到目标    测距    发射 */
+	/* track_flag等于0代表找到目标  测距    发射 */
 	if(track_flag == 0 && staSystem == AUTO1) {
-		Get_Distance();
-		HAL_Delay(20);  /* 等待测距 */
-		printf("distance: %d\n", distance);
+		fire_distance = distance;
+		HAL_Delay(20);  /* 等待 */
+		printf("distance: %d\n", fire_distance);
+		BEEP_ONCE();
 		
 		fire();
 		HAL_Delay(5);
@@ -69,16 +62,10 @@ void AUTO1_Action(void)
 }
 
 
+/* AUTO2要执行的动作 */
 void AUTO2_Action(void)
 {
-	get_icm20602_accdata_spi();
-	get_icm20602_gyro_spi();
-
-	IMU_quaterToEulerianAngles();  /* 获取欧拉角 */
-	//printf("%.2f,%.2f,%.2f\n", eulerAngle.pitch, eulerAngle.roll, eulerAngle.yaw);
-	//printf("%.2f,%.2f,%.2f\n\n", values[0], values[1], values[2]);
 	HAL_Delay(20);
-	
 }
 
 

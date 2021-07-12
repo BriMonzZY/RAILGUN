@@ -99,4 +99,6 @@
 ..\obj\gt9147.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\gt9147.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\gt9147.o: ..\HARDWARE\SENSER\senser.h
+..\obj\gt9147.o: ..\HARDWARE\stack\stack.h
 ..\obj\gt9147.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\gt9147.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

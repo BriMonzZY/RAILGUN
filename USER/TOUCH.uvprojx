@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\HARDWARE\screen app;..\HARDWARE\uart;..\HARDWARE\dma;..\HARDWARE\gpio;..\HARDWARE\BEEP;..\HARDWARE\spi;..\HARDWARE\icm20602;..\HARDWARE\gun_action;..\HARDWARE\Actuator;..\HARDWARE\SENSER</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\HARDWARE\screen app;..\HARDWARE\uart;..\HARDWARE\dma;..\HARDWARE\gpio;..\HARDWARE\BEEP;..\HARDWARE\spi;..\HARDWARE\icm20602;..\HARDWARE\gun_action;..\HARDWARE\Actuator;..\HARDWARE\SENSER;..\HARDWARE\stack</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -696,6 +696,11 @@
               <FileName>senser.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\SENSER\senser.c</FilePath>
+            </File>
+            <File>
+              <FileName>stack.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\stack\stack.c</FilePath>
             </File>
           </Files>
         </Group>

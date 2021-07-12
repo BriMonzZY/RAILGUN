@@ -15,6 +15,12 @@ PA3			UART2_RX
 
 
 
+PC7			UART6_RX
+
+PC6			UART6_TX
+
+
+
 PA5			SCL
 
 PA6			MISO SDO

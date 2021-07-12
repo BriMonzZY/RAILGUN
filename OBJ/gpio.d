@@ -98,4 +98,6 @@
 ..\obj\gpio.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\gpio.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\gpio.o: ..\HARDWARE\SENSER\senser.h
+..\obj\gpio.o: ..\HARDWARE\stack\stack.h
 ..\obj\gpio.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\gpio.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

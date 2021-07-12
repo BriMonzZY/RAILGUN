@@ -64,8 +64,10 @@
 #include "actuator.h"
 #include "tim.h"
 #include "senser.h"
+#include "stack.h"
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 
 
@@ -76,7 +78,7 @@ enum estaSystem {  //枚举系统状态
   INIT,MANUAL,AUTO1,AUTO2
 };
 
-typedef struct{
+typedef struct PID{
 	double SetPoint;            //设定值
 	double Kp;                  //比例系数
 	double Ki;                  //积分系数
@@ -86,6 +88,11 @@ typedef struct{
 	double SumError;            //误差积分  
 }PID;
 
+
+typedef struct STACK{
+	unsigned char stack[100];
+	unsigned int stack_top;
+}STACK;
 
 
 
@@ -97,13 +104,16 @@ extern int difference;
 extern int tim_angle;
 extern u16 track_flag;
 extern PID sPID;
+extern STACK 	distance_stack;;
 extern u16 yaw_angle_now;
 extern u16 pitch_angle_now;
 extern int distance;
+extern int fire_distance;
 extern u8 fire_flag;
 
 extern eulerianAngles_t eulerAngle;  /* 欧拉角结构体 */
-extern unsigned char temp[7];
+extern unsigned char temp[64];
+//extern unsigned char temp;  /* uart2单次触发接收到的数据 */
 extern unsigned char CMD_5[8];
 
 #endif

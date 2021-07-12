@@ -97,4 +97,6 @@
 ..\obj\screen_app.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\screen_app.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\screen_app.o: ..\HARDWARE\SENSER\senser.h
+..\obj\screen_app.o: ..\HARDWARE\stack\stack.h
 ..\obj\screen_app.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\screen_app.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

@@ -99,5 +99,7 @@
 ..\obj\lcd.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\lcd.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\lcd.o: ..\HARDWARE\SENSER\senser.h
+..\obj\lcd.o: ..\HARDWARE\stack\stack.h
 ..\obj\lcd.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\lcd.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\lcd.o: ..\HARDWARE\LCD\ltdc.h

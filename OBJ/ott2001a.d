@@ -99,4 +99,6 @@
 ..\obj\ott2001a.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\ott2001a.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\ott2001a.o: ..\HARDWARE\SENSER\senser.h
+..\obj\ott2001a.o: ..\HARDWARE\stack\stack.h
 ..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

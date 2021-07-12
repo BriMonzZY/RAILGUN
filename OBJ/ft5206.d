@@ -99,4 +99,6 @@
 ..\obj\ft5206.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\ft5206.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\ft5206.o: ..\HARDWARE\SENSER\senser.h
+..\obj\ft5206.o: ..\HARDWARE\stack\stack.h
 ..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

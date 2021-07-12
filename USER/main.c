@@ -11,12 +11,11 @@
 */
 
 /**
-	偏航角
+	yaw
 	tim11 ch1    PF7
 	
-	俯仰角
+	pitch
 	tim10 ch1    PF6
-
 */
 		
 		
@@ -25,16 +24,13 @@
 
 #include "main.h"
 
-/* 全局变量定义 */
+/* *************************全局变量定义****************************** */
 
 uint8_t temp_usart3;
 enum estaSystem staSystem = INIT;		/* 设置初始状态staSystem为INIT */
 
-
-
-PID sPID;  /* 定义PID结构体变量 */
-
-
+PID 		sPID;  /* 定义PID结构体变量 */
+STACK 	distance_stack;
 
 u16 cnt = 0; /* 触摸屏计数 */
 
@@ -43,15 +39,15 @@ long long manual_angle = 0;
 int tim_angle = 0;
 
 unsigned char CMD_5[8]={0x50,0x03,0x00,0x34,0x00,0x01,0xc8,0x45};  /*  */
-unsigned char temp[7];  /* uart2接收数据 */
+unsigned char temp[64];  /* uart2接收数据 */
+//unsigned char temp;  /* uart2单次触发接收到的数据 */
 int distance = 0;
+int fire_distance = 0;
 int difference = 666;  /* k210传回的目标与中心的差值 */
 u16 get_distance_flag = 0;
 u16 track_flag = 0;
-
 u16 yaw_angle_now = 30;
 u16 pitch_angle_now = 0;
-
 u8 fire_flag = 0;  /* 发射完成标志位 */
 
 
@@ -59,30 +55,34 @@ u8 fire_flag = 0;  /* 发射完成标志位 */
 /* 为PID变量申请内存，范围指向pp的指针 */
 void PIDInit (PID *pp)   
 {
-	memset(pp, 0, sizeof(PID)); //字节的内容全部设置为ch指定的ASCII值，块的大小由第三个参数指定，
+	memset(pp, 0, sizeof(PID)); /* 字节的内容全部设置为ch指定的ASCII值，块的大小由第三个参数指定 */
+}
+
+void STACKInit(STACK *stack)   
+{
+	memset(stack, 0, sizeof(STACK));
 }
 
 
 
-/* 主函数 */
+/* ******************************主函数********************************* */
 int main(void)
 {
 	/* 变量定义区域 */
 	
-	/* 初始化区域 */
+	/* *************************初始化区域******************************* */
 	
 	HAL_Init(); 									/* 初始化HAL库 */
-	
 	Stm32_Clock_Init(360,25,2,8); /* 设置时钟,180Mhz */
 	delay_init(180); 							/* 初始化延时函数 */
 	MX_GPIO_Init(); 							/* GPIO初始化 */
-	MX_DMA_Init(); 								/* mx dma 初始化 */
+	MX_DMA_Init(); 								/* MX DMA 初始化 */
   MX_USART1_UART_Init(); 				/* 串口1初始化 与PC通信 */
-	MX_USART2_UART_Init();				/* 串口2初始化 */
   MX_USART3_UART_Init(); 				/* 串口3初始化 与K210通信 */
+	MX_USART6_UART_Init();				/* 串口6初始化 激光测距 */
 	StartUartRxDMA(); 						/* 使能uartDMA */
-	HAL_UART_Receive_IT(&huart3, &temp_usart3, 1); /* 打开uart中断 */
-	HAL_UART_Receive_IT(&huart2, temp, 7);  /* 初始化UART2中断 */
+	HAL_UART_Receive_IT(&huart3, &temp_usart3, 1); 	/* 打开uart中断 */
+	HAL_UART_Receive_IT(&huart6, temp, 64); 
 	printf("main\n");
 	LED_Init(); 									/* 初始化LED */
 	printf("led\n");
@@ -93,18 +93,16 @@ int main(void)
 	LCD_Init(); 									/* 初始化LCD */
 	printf("lcd\n");
 	tp_dev.init(); 								/* 触摸屏初始化 */
-	
-	BEEP_Init();
+	BEEP_Init();									/* 蜂鸣器初始化 */
 	printf("beep init\n");
-	
-	MX_SPI1_Init();
-	icm20602_init_spi();
-	
-	MX_TIM2_Init();
+	MX_SPI1_Init();								/* 硬件spi初始化 */
+	icm20602_init_spi();					/* icm20602初始化 */
+	MX_TIM2_Init();								/* 定时器初始化 */
 	MX_TIM10_Init();
   MX_TIM11_Init();
-	HAL_TIM_Base_Start_IT(&htim2);   /* 使能定时器中断 */
-	HAL_TIM_PWM_Start(&htim10,TIM_CHANNEL_1);		/* 使能TIMPWM */
+	HAL_TIM_Base_Start_IT(&htim2);  										/* 使能定时器中断 */
+	
+	HAL_TIM_PWM_Start(&htim10,TIM_CHANNEL_1);						/* 使能TIMPWM */
 	HAL_TIM_PWM_Start(&htim11,TIM_CHANNEL_1);
 	__HAL_TIM_SET_COMPARE(&htim10, TIM_CHANNEL_1, 78);  /* 设定初始占空比 */
 	__HAL_TIM_SET_COMPARE(&htim11, TIM_CHANNEL_1, 76);
@@ -112,27 +110,24 @@ int main(void)
 	
 	
 	
-	PIDInit(&sPID);   /* 初始化结构体申请内存 */
-
+	PIDInit(&sPID);   /* 初始化PID结构体申请内存 */
 	sPID.Kp = 0.035;
 	sPID.Ki = 0.001;                  
 	sPID.Kd = 0.04;
 	sPID.SetPoint = 0.0;
 	
-	
-	
+	STACKInit(&distance_stack);
+	distance_stack.stack_top = 0;
 	
 	
 	
 	BEEP_ONCE();
-	
 	printf("init finished\n\n");
 	
 	
-	/* while(1) */
+	/* **********************while(1)*************************** */
 	while(1) {
 			
-		
 		
 		/* 触摸屏处理部分 */
 		tp_dev.scan(0);											/* 扫描触摸屏 */
@@ -162,7 +157,7 @@ int main(void)
 		else if(staSystem == AUTO2){
 			railgun_AUTO2_GUI_INIT();
 		}
-	}  /* the end of while(1) */		    
+	}/* the end of while(1) */		    
 }
 
 

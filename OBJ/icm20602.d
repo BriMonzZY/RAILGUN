@@ -97,4 +97,6 @@
 ..\obj\icm20602.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\icm20602.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\icm20602.o: ..\HARDWARE\SENSER\senser.h
+..\obj\icm20602.o: ..\HARDWARE\stack\stack.h
 ..\obj\icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

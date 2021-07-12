@@ -97,5 +97,7 @@
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\SENSER\senser.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\stack\stack.h
 ..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\stm32f4xx_it.o: stm32f4xx_it.h

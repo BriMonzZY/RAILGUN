@@ -98,4 +98,6 @@
 ..\obj\usart.o: ..\HARDWARE\Actuator\actuator.h
 ..\obj\usart.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\usart.o: ..\HARDWARE\SENSER\senser.h
+..\obj\usart.o: ..\HARDWARE\stack\stack.h
 ..\obj\usart.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\usart.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

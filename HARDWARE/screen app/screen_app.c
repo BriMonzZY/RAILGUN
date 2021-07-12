@@ -144,34 +144,19 @@ void lcd_draw_bline(u16 x1, u16 y1, u16 x2, u16 y2,u8 size,u16 color)
 void railgun_INIT_GUI_INIT(void)
 {
 	LCD_Display_Dir(0);
-	POINT_COLOR=BLUE;
 	
-	/*LCD_Draw_Circle(135,60,36); */	/* INIT */
+	/* init基本交互界面 */
+	POINT_COLOR=BLUE;
 	LCD_DrawRectangle(75, 220, 195, 270);	 	/* MANUAL */
 	LCD_DrawRectangle(75, 270,195, 320);		/* AUTO1 */
 	LCD_DrawRectangle(75, 320, 195, 370); 	/* AUTO2 */
-	
-	/* init基本交互界面 */
-	/*
-		LCD_DrawRectangle(0,140,120,210);
-		LCD_DrawRectangle(0,210,120,280);
-	*/
 	POINT_COLOR=CYAN;
 	LCD_ShowString(100,20,120,120,24,"WELCOM");
-	/*LCD_ShowString(110,55,50,50,24,"INIT");*/
   LCD_ShowString(90,230,100,100,32,"MANUAL");
 	LCD_ShowString(95,280,100,100,32,"AUTO1");
   LCD_ShowString(95,330,100,100,32,"AUTO2");	
 	
-	
-	/*
-		POINT_COLOR=BLUE;
-		LCD_DrawRectangle(350,0,480,70);
-		POINT_COLOR=CYAN;
-		LCD_ShowString(125,400,100,100,24,"local");
-	*/
-	
-	
+	/* 按键按下 */
 	if(cnt == 1){
 		/* 状态切换 */
 		/**************MANUAL****************/
