@@ -3,7 +3,7 @@
 #include <math.h>
 
 #define delta_T      0.005f  //5ms计算一次
-#define M_PI 3.1425f
+#define M_PI 3.1415f
  
 float I_ex, I_ey, I_ez;  // 误差积分
 
@@ -45,19 +45,19 @@ float invSqrt(float x) {
 
 void IMU_getValues(float *values) 
 {
-    static double lastaccel[3]= {0,0,0};
-    int i;
-    values[0] = ((float)icm_acc_x) * new_weight + lastaccel[0] * old_weight;
-    values[1] = ((float)icm_acc_y) * new_weight + lastaccel[1] * old_weight;
-    values[2] = ((float)icm_acc_z) * new_weight + lastaccel[2] * old_weight;
-    for(i=0; i<3; i++)
-    {
-        lastaccel[i] = values[i];
-    }
- 
-    values[3] = ((float)icm_gyro_x) * M_PI / 180 / 16.4f;
-    values[4] = ((float)icm_gyro_y) * M_PI / 180 / 16.4f;
-    values[5] = ((float)icm_gyro_z) * M_PI / 180 / 16.4f;
+	static double lastaccel[3]= {0,0,0};
+	int i;
+	values[0] = ((float)icm_acc_x) * new_weight + lastaccel[0] * old_weight;
+	values[1] = ((float)icm_acc_y) * new_weight + lastaccel[1] * old_weight;
+	values[2] = ((float)icm_acc_z) * new_weight + lastaccel[2] * old_weight;
+	for(i=0; i<3; i++)
+	{
+			lastaccel[i] = values[i];
+	}
+
+	values[3] = ((float)icm_gyro_x) * M_PI / 180 / 16.4f;
+	values[4] = ((float)icm_gyro_y) * M_PI / 180 / 16.4f;
+	values[5] = ((float)icm_gyro_z) * M_PI / 180 / 16.4f;
 }
 
 
@@ -152,6 +152,7 @@ void IMU_quaterToEulerianAngles(void)
     eulerAngle.yaw = atan2(2*q1*q2 + 2*q0*q3, -2*q2*q2 - 2*q3*q3 + 1) * 180/M_PI; // yaw
  
 		/*可以不用作姿态限度的限制*/
+	/*
     if(eulerAngle.roll>90 || eulerAngle.roll<-90)
     {
         if(eulerAngle.pitch > 0)
@@ -170,5 +171,6 @@ void IMU_quaterToEulerianAngles(void)
     else if(eulerAngle.yaw <-180)
     {
         eulerAngle.yaw +=360;
-    } 
+    }
+		*/
 }

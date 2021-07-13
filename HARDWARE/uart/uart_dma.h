@@ -17,6 +17,7 @@ extern UART_HandleTypeDef huart3;	//修改为所用串口
 extern uint8_t RxBuffer[UART_RX_BUF_SIZE];
 extern uint8_t TxBuffer[UART_RX_BUF_SIZE];
 extern uint8_t TxLen;
+extern int distance_aver[4];
 
 void USB_DMA_printf(const char *format,...);			//printf DMA方式
 void USB_printf(const char *format,...);				//printf 普通方式

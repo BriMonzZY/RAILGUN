@@ -10,6 +10,8 @@ void Init_To_Auto1(void);
 void Init_To_Auto2(void);
 void Auto1_To_Init(void);
 void Auto2_To_Init(void);
+void Init_To_Follow(void);
+void Follow_To_Init(void);
 
 
 

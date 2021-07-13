@@ -1,19 +1,23 @@
 #include "status_transmit.h"
 
 
-extern u16 get_distance_flag;
-
-
 void Manual_To_Init(void)
 {
 	LCD_Clear(WHITE);
 	Yaw_Angle(30);
+	Pitch_Angle(0);
+	staSystem = INIT;
 }
 
 
 void Init_To_Manual(void)
 {
 	LCD_Clear(WHITE);
+	
+	manual_distance = 0;
+	manual_angle = 0;
+	
+	
 	
 	/* DISTANCE */
 	POINT_COLOR=BLUE;
@@ -86,6 +90,11 @@ void Init_To_Manual(void)
 	
 	LCD_ShowString(230,60,120,120,24,"du");
 	LCD_ShowString(230,90,120,120,24,"mm");
+	
+	/* DEBUG */
+//	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_SET);
+//  HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_RESET);
+	
 }
 
 
@@ -119,12 +128,25 @@ void Init_To_Auto2(void)
 	
 }
 
+void Init_To_Follow(void)
+{
+	LCD_Clear(WHITE);
+	
+	POINT_COLOR=BLUE;
+	LCD_DrawRectangle(95, 435, 250, 470); // back to init
+	POINT_COLOR=CYAN;
+	LCD_ShowString(100,440,200,120,24,"back to init");
+	
+	
+	follow_flag = 1;  /* ¿ªÆô¸úËæÄ£Ê½ */
+}
+
 
 void Auto1_To_Init(void)
 {
 	LCD_Clear(WHITE);
 	Yaw_Angle(30);
-	get_distance_flag = 0;
+	Pitch_Angle(0);
 	yaw_angle_now = 30;
 	
 	track_flag = 0;
@@ -133,7 +155,19 @@ void Auto1_To_Init(void)
 void Auto2_To_Init(void)
 {
 	LCD_Clear(WHITE);
+	staSystem = INIT;
 	Yaw_Angle(30);
+	Pitch_Angle(0);
 	tim_angle = 0;
 	yaw_angle_now=30;
+}
+
+void Follow_To_Init(void)
+{
+	staSystem = INIT;
+	LCD_Clear(WHITE);
+	follow_flag = 0;
+	Yaw_Angle(30);
+	Pitch_Angle(0);
+	yaw_angle_now = 30;
 }

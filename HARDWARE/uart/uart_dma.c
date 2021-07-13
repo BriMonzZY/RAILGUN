@@ -10,7 +10,8 @@ uint8_t TxBuffer[UART_RX_BUF_SIZE] = {0};
 uint8_t sendCompleteSign = 1;
 uint8_t TxLen = 0;
 
-
+u8 distance_aver_cnt = 0;
+int distance_aver[4] = {0};  /* 从最近测得的4组距离值取平均作为发射距离值 */
 
 
 int stack_push(STACK *stack, unsigned char data);
@@ -25,15 +26,10 @@ int32_t a,b,c;
 double  d,e,f;
 void DataProcess(void)
 {
-	//在这里加入数据处理的函数
+	/* 在这里加入数据处理的函数 */
 	a = str2int(RxBuffer, ' ', 1);
-	//b = str2int(RxBuffer, ' ', 2);
-	//c = str2int(RxBuffer, ' ', 3);
-//	str2double(RxBuffer, ' ', 4, &d);
-//	str2double(RxBuffer, ' ', 5, &e);
-//	str2double(RxBuffer, ' ', 6, &f);
-	//printf("difference: %d\n", a);
-	//printf("%d %d %d\n", a, b, c);
+	/* b = str2int(RxBuffer, ' ', 2); */
+	/* str2double(RxBuffer, ' ', 4, &d); */
 	difference = a;
 }
 
@@ -158,43 +154,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}
 	
 	
+	
+	#if 0
 	/* 激光测距uart2串口中断 */
 	if(huart -> Instance == huart2.Instance){
 		
-		#if 0
-		
-		//printf("a\n");
-		/* printf("%x %x %x %x %x %x %x \n", temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6]); */
-		printf("%d \n", temp[3]*16*16 + temp[4]);
-		distance = temp[3]*16*16 + temp[4];
-		HAL_UART_Receive_IT(&huart2, temp, 7);
-		
-		
-		#endif
-		
-		
-		#if 0
-		/*
-			接收到一个数据就进入中断
-			HAL_UART_Receive_IT(&huart2, temp, 1);
-		*/
-		recive_queue[recive_queue_index++] = temp;
-		if(recive_queue_index == 7) recive_queue_index = 0;
-		/* 检测是不是距离回传 */
-		if(recive_queue[0] == 0x50 && recive_queue[1] == 0x03 && recive_queue[2] == 0x02){
-			cmd_cnt++;
-		}
-		/* 收到完整的回传指令后进行计算 */
-		if(cmd_cnt == 5) {  
-			distance = temp[3]*16*16 + temp[4];
-			cmd_cnt = 0;
-		}
-		
-		#endif
 		
 		
 		
-		#if 0
+		
 		printf("%d ", temp);
 		
 		if(temp == 0x50 && cmd_cnt == 0) {
@@ -227,17 +195,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		}
 		HAL_UART_Receive_IT(&huart2, &temp, 1);
 		
-		#endif
-		
-		
-		#if 0
-		printf("**********\n");
-		printf("%d", temp);
-		HAL_UART_Receive_IT(&huart2, &temp, 1);
-		
-		#endif
-		
+			
 	}
+	#endif
+	
 	
 	/* *************************************激光测距uart6串口中断********************************* */
 	if(huart -> Instance == huart6.Instance){
@@ -291,6 +252,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 				distance_stack.stack_top = 0;
 			}
 			
+		}
+		
+		/* 记录最近四次测量值  简易滑动平均滤波 */
+		distance_aver[distance_aver_cnt++] = distance;
+		if(distance_aver_cnt == 4) {
+			distance_aver_cnt = 0;
 		}
 		
 		//printf("%d\n", distance);

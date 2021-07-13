@@ -31,6 +31,22 @@ PC4			SPI1_cs
 
 
 
+PF7			TIM11ch1	yaw		挂载在APB2上
+
+PF6			TIM10ch1	pitch		挂载在APB2上  180MHz
+
+PF8			TIM13ch1	pitch		挂载在APB1上  90MHz
+
+
+
+TIM2挂载在APB1上
+
+
+
+PE2			放电寄存器
+
+PE3			充电寄存器
+
 
 
 

@@ -150,11 +150,13 @@ void railgun_INIT_GUI_INIT(void)
 	LCD_DrawRectangle(75, 220, 195, 270);	 	/* MANUAL */
 	LCD_DrawRectangle(75, 270,195, 320);		/* AUTO1 */
 	LCD_DrawRectangle(75, 320, 195, 370); 	/* AUTO2 */
+	LCD_DrawRectangle(75, 370, 195, 420); 	/* FOLLOW */
 	POINT_COLOR=CYAN;
 	LCD_ShowString(100,20,120,120,24,"WELCOM");
   LCD_ShowString(90,230,100,100,32,"MANUAL");
 	LCD_ShowString(95,280,100,100,32,"AUTO1");
   LCD_ShowString(95,330,100,100,32,"AUTO2");	
+	LCD_ShowString(95,380,100,100,32,"FOLLOW");	
 	
 	/* °´¼ü°´ÏÂ */
 	if(cnt == 1){
@@ -176,6 +178,12 @@ void railgun_INIT_GUI_INIT(void)
 			BEEP_ONCE();
 			staSystem = AUTO2;
 			Init_To_Auto2();
+		}
+		/**************FOLLOW****************/
+		if(tp_dev.x[t] >= 75 && tp_dev.x[t] <= 195 && tp_dev.y[t] >= 370 && tp_dev.y[t] <= 420){
+			BEEP_ONCE();
+			staSystem = FOLLOW;
+			Init_To_Follow();
 		}
 	}
 }
@@ -360,6 +368,23 @@ void railgun_AUTO2_GUI_INIT(void)
 		}
 	}
 }
+
+
+void railgun_FOLLOW_GUI_INIT(void)
+{
+		FOLLOW_Action();
+		
+		if(cnt == 1) {
+			/* back to the init */
+			if(tp_dev.x[t] >= 95 && tp_dev.x[t] <= 250 && tp_dev.y[t] >= 435 && tp_dev.y[t] <= 470){
+				BEEP_ONCE();
+				staSystem = INIT;
+				Follow_To_Init();
+			}
+		}
+}
+
+
 	
 void railgun_button(void)
 {

@@ -75,7 +75,7 @@
 
 
 enum estaSystem {  //枚举系统状态
-  INIT,MANUAL,AUTO1,AUTO2
+  INIT,MANUAL,AUTO1,AUTO2,FOLLOW
 };
 
 typedef struct PID{
@@ -104,17 +104,17 @@ extern int difference;
 extern int tim_angle;
 extern u16 track_flag;
 extern PID sPID;
-extern STACK 	distance_stack;;
+extern STACK 	distance_stack;
 extern u16 yaw_angle_now;
 extern u16 pitch_angle_now;
 extern int distance;
 extern int fire_distance;
 extern u8 fire_flag;
+extern u16 follow_flag;
 
 extern eulerianAngles_t eulerAngle;  /* 欧拉角结构体 */
 extern unsigned char temp[64];
-//extern unsigned char temp;  /* uart2单次触发接收到的数据 */
-extern unsigned char CMD_5[8];
+/* extern unsigned char CMD_5[8]; */
 
 #endif
 
@@ -122,6 +122,13 @@ extern unsigned char CMD_5[8];
 
 #define SPI1_CS_Pin GPIO_PIN_4
 #define SPI1_CS_GPIO_Port GPIOC
+
+#define Discharge_relay_Pin GPIO_PIN_2
+#define Discharge_relay_GPIO_Port GPIOE
+#define Charging_relay_Pin GPIO_PIN_3
+#define Charging_relay_GPIO_Port GPIOE
+#define pitch_relay_Pin GPIO_PIN_4
+#define pitch_relay_GPIO_Port GPIOE
 
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/

@@ -1,6 +1,6 @@
 Dependencies for Project 'TOUCH', Target 'TOUCH': (DO NOT MODIFY !)
-F (.\main.c)(0x60EC00B3)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
-I (main.h)(0x60EBFA48)
+F (.\main.c)(0x60ED5D08)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+I (main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -73,7 +73,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F98D)
 I (..\SYSTEM\sys\sys.h)(0x60B71366)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
@@ -85,23 +85,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
 F (.\stm32f4xx_it.c)(0x60EBDDE8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
-I (main.h)(0x60EBFA48)
+I (main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -174,7 +174,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F98D)
 I (..\SYSTEM\sys\sys.h)(0x60B71366)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
@@ -186,17 +186,17 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -1989,7 +1989,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F98D)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
@@ -2001,17 +2001,17 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -2239,7 +2239,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F98D)
 I (D:\app\keilARM\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (..\HARDWARE\LCD\font.h)(0x5710F98E)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
@@ -2249,17 +2249,17 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -2717,23 +2717,23 @@ I (..\HARDWARE\TOUCH\ctiic.h)(0x5710F98E)
 I (..\HARDWARE\LCD\lcd.h)(0x60B09693)
 I (D:\app\keilARM\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
 I (..\HARDWARE\KEY\key.h)(0x5BC7FEF2)
 I (..\HARDWARE\SDRAM\sdram.h)(0x60B091CC)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -2816,7 +2816,7 @@ I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ctiic.h)(0x5710F98E)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
@@ -2824,17 +2824,17 @@ I (..\HARDWARE\KEY\key.h)(0x5BC7FEF2)
 I (..\HARDWARE\LCD\lcd.h)(0x60B09693)
 I (D:\app\keilARM\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (..\HARDWARE\SDRAM\sdram.h)(0x60B091CC)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -2917,7 +2917,7 @@ I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ctiic.h)(0x5710F98E)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
 I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (..\HARDWARE\LED\led.h)(0x5710F98E)
@@ -2925,17 +2925,17 @@ I (..\HARDWARE\KEY\key.h)(0x5BC7FEF2)
 I (..\HARDWARE\LCD\lcd.h)(0x60B09693)
 I (D:\app\keilARM\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (..\HARDWARE\SDRAM\sdram.h)(0x60B091CC)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -3022,8 +3022,8 @@ I (..\SYSTEM\delay\delay.h)(0x60B0959A)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (..\HARDWARE\24CXX\24cxx.h)(0x5710F98E)
 I (..\HARDWARE\IIC\myiic.h)(0x5710F98E)
-F (..\HARDWARE\screen app\screen_app.c)(0x60EA55F6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\screen_app.o --omf_browse ..\obj\screen_app.crf --depend ..\obj\screen_app.d)
-I (..\USER\main.h)(0x60EBFA48)
+F (..\HARDWARE\screen app\screen_app.c)(0x60EC1097)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\screen_app.o --omf_browse ..\obj\screen_app.crf --depend ..\obj\screen_app.d)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3107,24 +3107,24 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
 F (..\HARDWARE\uart\numandstr.c)(0x60EBE398)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\numandstr.o --omf_browse ..\obj\numandstr.crf --depend ..\obj\numandstr.d)
 I (..\HARDWARE\uart\numandstr.h)(0x60ACBA73)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3208,24 +3208,24 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\uart\uart_dma.c)(0x60EC0353)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\uart_dma.o --omf_browse ..\obj\uart_dma.crf --depend ..\obj\uart_dma.d)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
-I (..\USER\main.h)(0x60EBFA48)
+F (..\HARDWARE\uart\uart_dma.c)(0x60ED449F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\uart_dma.o --omf_browse ..\obj\uart_dma.crf --depend ..\obj\uart_dma.d)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3309,16 +3309,16 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -3327,7 +3327,7 @@ I (D:\app\keilARM\ARM\ARMCC\include\stdarg.h)(0x599EDB3A)
 I (..\HARDWARE\uart\numandstr.h)(0x60ACBA73)
 F (..\HARDWARE\dma\dma.c)(0x60EBDDCD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\dma.o --omf_browse ..\obj\dma.crf --depend ..\obj\dma.d)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3411,23 +3411,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\gpio\gpio.c)(0x60E68CBD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\gpio.o --omf_browse ..\obj\gpio.crf --depend ..\obj\gpio.d)
+F (..\HARDWARE\gpio\gpio.c)(0x60ED38C7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\gpio.o --omf_browse ..\obj\gpio.crf --depend ..\obj\gpio.d)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3510,17 +3510,17 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -3598,7 +3598,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F98D)
-F (..\HARDWARE\icm20602\attitude_solution.c)(0x60E6A304)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\attitude_solution.o --omf_browse ..\obj\attitude_solution.crf --depend ..\obj\attitude_solution.d)
+F (..\HARDWARE\icm20602\attitude_solution.c)(0x60ED4549)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\attitude_solution.o --omf_browse ..\obj\attitude_solution.crf --depend ..\obj\attitude_solution.d)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
@@ -3674,7 +3674,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x5710F98D)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F98D)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\SYSTEM\sys\sys.h)(0x60B71366)
 I (..\HARDWARE\uart\usart.h)(0x60EBE062)
 I (..\HARDWARE\gpio\gpio.h)(0x60B20988)
@@ -3688,23 +3688,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
 F (..\HARDWARE\spi\spi.c)(0x60E68D14)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\spi.o --omf_browse ..\obj\spi.crf --depend ..\obj\spi.d)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3788,23 +3788,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\screen app\status_transmit.c)(0x60EC08CB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\status_transmit.o --omf_browse ..\obj\status_transmit.crf --depend ..\obj\status_transmit.d)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\USER\main.h)(0x60EBFA48)
+F (..\HARDWARE\screen app\status_transmit.c)(0x60ED600F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\status_transmit.o --omf_browse ..\obj\status_transmit.crf --depend ..\obj\status_transmit.d)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3888,23 +3888,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\gun_action\gun_action.c)(0x60EC0B82)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\gun_action.o --omf_browse ..\obj\gun_action.crf --depend ..\obj\gun_action.d)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
-I (..\USER\main.h)(0x60EBFA48)
+F (..\HARDWARE\gun_action\gun_action.c)(0x60ED583D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\gun_action.o --omf_browse ..\obj\gun_action.crf --depend ..\obj\gun_action.d)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -3988,23 +3988,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\Actuator\actuator.c)(0x60EC0BB8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\actuator.o --omf_browse ..\obj\actuator.crf --depend ..\obj\actuator.d)
+F (..\HARDWARE\Actuator\actuator.c)(0x60ED5D9B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\actuator.o --omf_browse ..\obj\actuator.crf --depend ..\obj\actuator.d)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -4088,23 +4088,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\gun_action\tim.c)(0x60E81FBC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\tim.o --omf_browse ..\obj\tim.crf --depend ..\obj\tim.d)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
-I (..\USER\main.h)(0x60EBFA48)
+F (..\HARDWARE\gun_action\tim.c)(0x60ED36E9)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\tim.o --omf_browse ..\obj\tim.crf --depend ..\obj\tim.d)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -4188,23 +4188,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\HARDWARE\SENSER\senser.c)(0x60EBAD13)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\senser.o --omf_browse ..\obj\senser.crf --depend ..\obj\senser.d)
+F (..\HARDWARE\SENSER\senser.c)(0x60EC4D2B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\senser.o --omf_browse ..\obj\senser.crf --depend ..\obj\senser.d)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -4288,23 +4288,23 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)
 F (..\HARDWARE\stack\stack.c)(0x60EBF217)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\STM32F4xx_HAL_Driver\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\LCD -I ..\HARDWARE\SDRAM -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\TOUCH -I "..\HARDWARE\screen app" -I ..\HARDWARE\uart -I ..\HARDWARE\dma -I ..\HARDWARE\gpio -I ..\HARDWARE\BEEP -I ..\HARDWARE\spi -I ..\HARDWARE\icm20602 -I ..\HARDWARE\gun_action -I ..\HARDWARE\Actuator -I ..\HARDWARE\SENSER -I ..\HARDWARE\stack-I.\RTE\_TOUCH-ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\app\keilARM\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o ..\obj\stack.o --omf_browse ..\obj\stack.crf --depend ..\obj\stack.d)
 I (..\HARDWARE\stack\stack.h)(0x60EBEFD7)
-I (..\USER\main.h)(0x60EBFA48)
+I (..\USER\main.h)(0x60ECE507)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5710F98D)
 I (..\USER\stm32f4xx_hal_conf.h)(0x5710F98E)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x5710F98D)
@@ -4388,17 +4388,17 @@ I (..\HARDWARE\TOUCH\touch.h)(0x60B66C53)
 I (..\HARDWARE\TOUCH\ott2001a.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\gt9147.h)(0x5710F98E)
 I (..\HARDWARE\TOUCH\ft5206.h)(0x5710F98E)
-I (..\HARDWARE\screen app\screen_app.h)(0x60B99C7F)
+I (..\HARDWARE\screen app\screen_app.h)(0x60EC0D19)
 I (..\HARDWARE\dma\dma.h)(0x60B2011C)
-I (..\HARDWARE\uart\uart_dma.h)(0x60ACB904)
+I (..\HARDWARE\uart\uart_dma.h)(0x60ED3F36)
 I (..\HARDWARE\BEEP\beep.h)(0x60B9CCB3)
 I (..\HARDWARE\spi\spi.h)(0x60E68368)
 I (..\HARDWARE\icm20602\icm20602.h)(0x60C02E6B)
 I (..\HARDWARE\icm20602\attitude_solution.h)(0x60C0348B)
-I (..\HARDWARE\screen app\status_transmit.h)(0x60E699FC)
-I (..\HARDWARE\gun_action\gun_action.h)(0x60E811ED)
+I (..\HARDWARE\screen app\status_transmit.h)(0x60EC0E7B)
+I (..\HARDWARE\gun_action\gun_action.h)(0x60EC0EF1)
 I (..\HARDWARE\Actuator\actuator.h)(0x60E963FD)
-I (..\HARDWARE\gun_action\tim.h)(0x60E81E03)
+I (..\HARDWARE\gun_action\tim.h)(0x60ECFAA0)
 I (..\HARDWARE\SENSER\senser.h)(0x60E82C59)
 I (D:\app\keilARM\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\app\keilARM\ARM\ARMCC\include\math.h)(0x599EDB3E)

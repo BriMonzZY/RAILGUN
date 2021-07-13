@@ -12,4 +12,5 @@ void railgun_INIT_GUI_INIT(void);
 void railgun_AUTO1_GUI_INIT(void);
 void railgun_AUTO2_GUI_INIT(void);
 void railgun_button(void); //key
+void railgun_FOLLOW_GUI_INIT(void);
 #endif
