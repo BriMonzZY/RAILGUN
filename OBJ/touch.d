@@ -81,3 +81,27 @@
 ..\obj\touch.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\touch.o: ..\HARDWARE\24CXX\24cxx.h
 ..\obj\touch.o: ..\HARDWARE\IIC\myiic.h
+..\obj\touch.o: ..\USER\main.h
+..\obj\touch.o: ..\HARDWARE\uart\usart.h
+..\obj\touch.o: ..\USER\main.h
+..\obj\touch.o: ..\HARDWARE\gpio\gpio.h
+..\obj\touch.o: ..\HARDWARE\LED\led.h
+..\obj\touch.o: ..\HARDWARE\KEY\key.h
+..\obj\touch.o: ..\HARDWARE\SDRAM\sdram.h
+..\obj\touch.o: ..\HARDWARE\screen app\screen_app.h
+..\obj\touch.o: ..\HARDWARE\dma\dma.h
+..\obj\touch.o: ..\HARDWARE\uart\uart_dma.h
+..\obj\touch.o: ..\HARDWARE\BEEP\beep.h
+..\obj\touch.o: ..\HARDWARE\spi\spi.h
+..\obj\touch.o: ..\HARDWARE\icm20602\icm20602.h
+..\obj\touch.o: ..\HARDWARE\icm20602\attitude_solution.h
+..\obj\touch.o: ..\HARDWARE\screen app\status_transmit.h
+..\obj\touch.o: ..\HARDWARE\gun_action\gun_action.h
+..\obj\touch.o: ..\HARDWARE\Actuator\actuator.h
+..\obj\touch.o: ..\HARDWARE\gun_action\tim.h
+..\obj\touch.o: ..\HARDWARE\SENSER\senser.h
+..\obj\touch.o: ..\HARDWARE\stack\stack.h
+..\obj\touch.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\touch.o: ..\HARDWARE\IIC\myiic.h
+..\obj\touch.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
+..\obj\touch.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h

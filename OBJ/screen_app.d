@@ -98,5 +98,8 @@
 ..\obj\screen_app.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\screen_app.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\screen_app.o: ..\HARDWARE\stack\stack.h
+..\obj\screen_app.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\screen_app.o: ..\HARDWARE\IIC\myiic.h
+..\obj\screen_app.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\screen_app.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\screen_app.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

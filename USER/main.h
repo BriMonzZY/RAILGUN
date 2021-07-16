@@ -65,6 +65,8 @@
 #include "tim.h"
 #include "senser.h"
 #include "stack.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -75,7 +77,7 @@
 
 
 enum estaSystem {  //枚举系统状态
-  INIT,MANUAL,AUTO1,AUTO2,FOLLOW
+  INIT,MANUAL,AUTO1,AUTO2,FOLLOW, DEVELOPER
 };
 
 typedef struct PID{
@@ -112,9 +114,17 @@ extern int fire_distance;
 extern u8 fire_flag;
 extern u16 follow_flag;
 
-extern eulerianAngles_t eulerAngle;  /* 欧拉角结构体 */
-extern unsigned char temp[64];
+extern int pitch_expect;  /* pitch轴角度期望值 */
+extern int pitch_anle_icm20602;
+
+extern unsigned char temp[64];  /* 超声波测距 */
 /* extern unsigned char CMD_5[8]; */
+
+extern float pitch,roll,yaw; 		//欧拉角
+extern short aacx,aacy,aacz;		//加速度传感器原始数据
+extern short gyrox,gyroy,gyroz;	//陀螺仪原始数据
+extern short temperature;					//温度
+
 
 #endif
 
@@ -129,6 +139,21 @@ extern unsigned char temp[64];
 #define Charging_relay_GPIO_Port GPIOE
 #define pitch_relay_Pin GPIO_PIN_4
 #define pitch_relay_GPIO_Port GPIOE
+
+#define KEY1_Pin GPIO_PIN_2
+#define KEY1_GPIO_Port GPIOH
+#define KEY1_EXTI_IRQn EXTI2_IRQn
+#define KEY0_Pin GPIO_PIN_3
+#define KEY0_GPIO_Port GPIOH
+#define KEY0_EXTI_IRQn EXTI3_IRQn
+
+#define MPU_SCL_Pin GPIO_PIN_5
+#define MPU_SCL_GPIO_Port GPIOE
+#define MPU_SDA_Pin GPIO_PIN_9
+#define MPU_SDA_GPIO_Port GPIOF
+#define MPU6050_INT_EXTI_IRQn EXTI9_5_IRQn
+#define MPU6050_INT_Pin GPIO_PIN_6
+#define MPU6050_INT_GPIO_Port GPIOE
 
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/

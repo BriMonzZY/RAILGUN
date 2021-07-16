@@ -99,5 +99,8 @@
 ..\obj\status_transmit.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\status_transmit.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\status_transmit.o: ..\HARDWARE\stack\stack.h
+..\obj\status_transmit.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\status_transmit.o: ..\HARDWARE\IIC\myiic.h
+..\obj\status_transmit.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\status_transmit.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\status_transmit.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

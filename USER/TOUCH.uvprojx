@@ -312,7 +312,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\HARDWARE\screen app;..\HARDWARE\uart;..\HARDWARE\dma;..\HARDWARE\gpio;..\HARDWARE\BEEP;..\HARDWARE\spi;..\HARDWARE\icm20602;..\HARDWARE\gun_action;..\HARDWARE\Actuator;..\HARDWARE\SENSER;..\HARDWARE\stack</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\sys;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\HARDWARE\screen app;..\HARDWARE\uart;..\HARDWARE\dma;..\HARDWARE\gpio;..\HARDWARE\BEEP;..\HARDWARE\spi;..\HARDWARE\icm20602;..\HARDWARE\gun_action;..\HARDWARE\Actuator;..\HARDWARE\SENSER;..\HARDWARE\stack;..\HARDWARE\IIC;..\HARDWARE\mpu6050;..\HARDWARE\mpu6050\eMPL;..\HARDWARE\exti_mpu6050;..\SYSTEM\delay</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -548,11 +548,6 @@
           <GroupName>SYSTEM</GroupName>
           <Files>
             <File>
-              <FileName>delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SYSTEM\delay\delay.c</FilePath>
-            </File>
-            <File>
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\sys\sys.c</FilePath>
@@ -561,6 +556,11 @@
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\uart\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\delay\delay.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -701,6 +701,21 @@
               <FileName>stack.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\stack\stack.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\mpu6050\mpu6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>inv_mpu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\mpu6050\eMPL\inv_mpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>inv_mpu_dmp_motion_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\mpu6050\eMPL\inv_mpu_dmp_motion_driver.c</FilePath>
             </File>
           </Files>
         </Group>

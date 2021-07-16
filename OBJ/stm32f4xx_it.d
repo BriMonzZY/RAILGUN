@@ -98,6 +98,9 @@
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\stack\stack.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\IIC\myiic.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\stm32f4xx_it.o: stm32f4xx_it.h

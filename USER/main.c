@@ -47,11 +47,22 @@ unsigned char temp[64];  /* uart2接收数据 */
 int distance = 0;  /* 实时接收的距离数据 */
 int fire_distance = 0;  /* 发射时候的距离值 */
 int difference = 666;  /* k210传回的目标与中心的差值 */
+
+int pitch_expect = 0;  /* pitch轴角度期望值 */
+int pitch_anle_icm20602 = 0;
+
 u16 track_flag = 0;  /* AUTO1追踪模式标志位 */
 u16 yaw_angle_now = 30; /* 当前的yaw值 */
 u16 pitch_angle_now = 0;  /* 当前的pitch值 */
 u16 follow_flag = 0;  /* 跟随模式标志位 */
 u8 fire_flag = 0;  /* 发射完成标志位 */
+
+
+/* MPU6050数据 */
+float pitch,roll,yaw; 			/* 欧拉角 */
+short aacx,aacy,aacz;				/* 加速度传感器原始数据 */
+short gyrox,gyroy,gyroz;		/* 陀螺仪原始数据 */
+short temperature;					/* 温度 */
 
 
 
@@ -78,7 +89,11 @@ int main(void)
 	
 	HAL_Init(); 									/* 初始化HAL库 */
 	Stm32_Clock_Init(360,25,2,8); /* 设置时钟,180Mhz */
-	delay_init(180); 							/* 初始化延时函数 */
+	printf("clock\n");
+	
+	HAL_Delay(1000);
+	
+	//delay_init(180); 							/* 初始化延时函数 */
 	MX_GPIO_Init(); 							/* GPIO初始化 */
 	MX_DMA_Init(); 								/* MX DMA 初始化 */
   MX_USART1_UART_Init(); 				/* 串口1初始化 与PC通信 */
@@ -105,7 +120,7 @@ int main(void)
 	MX_TIM10_Init();
   MX_TIM11_Init();
 	MX_TIM13_Init();
-	HAL_TIM_Base_Start_IT(&htim2);  										/* 使能定时器中断 */
+	
 	
 	
 	HAL_TIM_PWM_Start(&htim10,TIM_CHANNEL_1);						/* 使能TIMPWM */
@@ -116,6 +131,19 @@ int main(void)
 	__HAL_TIM_SET_COMPARE(&htim13, TIM_CHANNEL_1, 78);
 	
 	
+	/* 初始化MPU6050 */
+	delay_init(180);
+	while(MPU_Init());	
+	
+	#if 0
+	while(mpu_dmp_init()){
+		printf("MPU6050 Error!!!\r\n");
+		delay_ms(500);
+	}
+	#endif
+	
+	printf("MPU6050 OK\r\n");
+	
 	PIDInit(&sPID);   /* 初始化PID结构体申请内存 */
 	sPID.Kp = 0.035;
 	sPID.Ki = 0.001;                  
@@ -125,8 +153,15 @@ int main(void)
 	STACKInit(&distance_stack);
 	distance_stack.stack_top = 0;  /* 栈顶索引为0 */
 	
+	/* 给pitch舵机供电 */
 	HAL_Delay(500);
 	HAL_GPIO_WritePin(pitch_relay_GPIO_Port,pitch_relay_Pin,GPIO_PIN_RESET);
+	
+	
+	
+	HAL_TIM_Base_Start_IT(&htim2);  										/* 使能定时器中断 */
+	
+	
 	
 	BEEP_ONCE();
 	printf("init finished\n\n");
@@ -134,6 +169,26 @@ int main(void)
 	
 	/* **********************while(1)*************************** */
 	while(1) {
+		
+		#if 0/* 使用DMP和定时器中断冲突 */
+		if(mpu_dmp_get_data(&pitch,&roll,&yaw)==0)
+		{
+			printf("%f %f %f\n", pitch, roll, yaw);
+			temperature=MPU_Get_Temperature();	//得到温度值
+			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);	//得到加速度传感器数据
+			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);	//得到陀螺仪数据
+		}
+		#endif
+		
+		
+		
+		
+		
+//		MPU_Get_Accelerometer(&aacx,&aacy,&aacz);	//得到加速度传感器数据
+//		MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);	//得到陀螺仪数据
+//		
+//		printf("%d %d %d\n", aacx, aacy, aacz);
+//		printf("%d %d %d\n\n", gyrox, gyroy, gyroz);
 		
 		/* 触摸屏处理部分 */
 		tp_dev.scan(0);											/* 扫描触摸屏 */

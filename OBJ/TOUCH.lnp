@@ -24,9 +24,9 @@
 "..\obj\stm32f4xx_hal_dma2d.o"
 "..\obj\stm32f4xx_hal_spi.o"
 "..\obj\stm32f4xx_hal_can.o"
-"..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"
+"..\obj\delay.o"
 "..\obj\led.o"
 "..\obj\key.o"
 "..\obj\lcd.o"
@@ -54,6 +54,9 @@
 "..\obj\tim.o"
 "..\obj\senser.o"
 "..\obj\stack.o"
+"..\obj\mpu6050.o"
+"..\obj\inv_mpu.o"
+"..\obj\inv_mpu_dmp_motion_driver.o"
 --library_type=microlib --strict --scatter "..\OBJ\TOUCH.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

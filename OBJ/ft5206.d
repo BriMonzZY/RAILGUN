@@ -100,5 +100,8 @@
 ..\obj\ft5206.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\ft5206.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\ft5206.o: ..\HARDWARE\stack\stack.h
+..\obj\ft5206.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\ft5206.o: ..\HARDWARE\IIC\myiic.h
+..\obj\ft5206.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

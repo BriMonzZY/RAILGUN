@@ -31,8 +31,13 @@ void Pitch_Angle(uint8_t angle)
 void MANUAL_Action(void)
 {
 	Yaw_Angle(manual_angle);
+	
+	Pitch_Angle(manual_distance);
+	
+	
 	HAL_Delay(500);
 	fire();
+	HAL_Delay(500);
 	
 	while(fire_flag == 0);
 	fire_flag = 0;

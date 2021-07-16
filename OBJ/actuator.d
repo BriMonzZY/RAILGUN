@@ -99,5 +99,8 @@
 ..\obj\actuator.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\actuator.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\actuator.o: ..\HARDWARE\stack\stack.h
+..\obj\actuator.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\actuator.o: ..\HARDWARE\IIC\myiic.h
+..\obj\actuator.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\actuator.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\actuator.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

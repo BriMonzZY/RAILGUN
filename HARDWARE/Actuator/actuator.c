@@ -9,7 +9,7 @@ extern u16 get_distance_flag;
 
 /* 1ms进一次中断 */
 uint16_t tim_cnt_50 = 0;
-uint16_t tim_cnt_100 = 0;
+uint16_t tim_cnt_10 = 0;
 uint16_t tim_cnt_40 = 0;
 uint16_t tim_cnt_5 = 0;
 
@@ -56,7 +56,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	if (htim == (&htim2)) {
 		
 		tim_cnt_50++;
-		tim_cnt_100++;
+		tim_cnt_10++;
 		tim_cnt_40++;
 		tim_cnt_5++;
 		
@@ -103,11 +103,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			
 		}
 		
-		/* 无用 */
-		if(tim_cnt_100 >= 100) {
-			tim_cnt_100 = 0;
-			//printf("%d \n", distance);
+		/* 刷新uart6状态  pitch闭环 */
+		if(tim_cnt_10 >= 10) {
+			tim_cnt_10 = 0;
+			/* printf("%d \n", distance); */
 			HAL_UART_Receive_IT(&huart6, temp, 64); 
+			
+			
+			get_icm20602_accdata_spi();
+			get_icm20602_gyro_spi();
+			IMU_quaterToEulerianAngles();  /* 获取欧拉角 */
+			//printf("%.2f,%.2f,%.2f\n", eulerAngle.pitch, eulerAngle.roll, eulerAngle.yaw);
+			
+			printf("%f \n", 180-eulerAngle.roll);
+			
+			yaw_angle_now += PIDCalc(&sPID, pitch_angle_now-pitch_expect);
+			Pitch_Angle(pitch_angle_now);
+			
+			
 		}
 		
 		/* auto1追踪 */
@@ -132,25 +145,25 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			}
 		}
 		
-		/* 跟随模式 */
+		/* 跟随模式 MPU6050 */
 		if(tim_cnt_5 >= 5) {
 			tim_cnt_5 = 0;
 			if(follow_flag == 1) {
 				
 				#if 1
-					get_icm20602_accdata_spi();
-					get_icm20602_gyro_spi();
-					IMU_quaterToEulerianAngles();  /* 获取欧拉角 */
-					printf("%.2f,%.2f,%.2f\n", eulerAngle.pitch, eulerAngle.roll, eulerAngle.yaw);
+					MPU_Get_Accelerometer(&aacx,&aacy,&aacz);	//得到加速度传感器数据
+					MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);	//得到陀螺仪数据
+					IMU_quaterToEulerianAngles_mpu6050();  /* 获取欧拉角 */
+					printf("%.2f,%.2f,%.2f\n", eulerAngle_mpu6050.pitch, eulerAngle_mpu6050.roll, eulerAngle_mpu6050.yaw);
 				#endif
 				
 				
-				if(eulerAngle.yaw >= -30 && eulerAngle.yaw <= 30) {
-					yaw_angle_now = eulerAngle.yaw;
-					Yaw_Angle(eulerAngle.yaw + 30);
+				if(eulerAngle_mpu6050.yaw >= -30 && eulerAngle_mpu6050.yaw <= 30) {
+					yaw_angle_now = eulerAngle_mpu6050.yaw;
+					Yaw_Angle(eulerAngle_mpu6050.yaw + 30);
 				}
-				if(-eulerAngle.pitch >= 0 && -eulerAngle.pitch <= 60) {
-					Pitch_Angle(-eulerAngle.pitch);
+				if(-eulerAngle_mpu6050.pitch >= 0 && -eulerAngle_mpu6050.pitch <= 50) {
+					Pitch_Angle(-eulerAngle_mpu6050.pitch);
 				}
 				
 				
@@ -163,6 +176,36 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{ 
+	if(GPIO_Pin == KEY0_Pin) {  /* 充电 */
+		delay_ms(50);
+		if(HAL_GPIO_ReadPin(KEY0_GPIO_Port, KEY0_Pin) == 0) {
+			HAL_GPIO_TogglePin(Charging_relay_GPIO_Port, Charging_relay_Pin);
+		}
+		
+	}
+	
+	if(GPIO_Pin == KEY1_Pin) {  /* 放电 */
+		delay_ms(50);
+		if(HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == 0) {
+			HAL_GPIO_TogglePin(Discharge_relay_GPIO_Port, Discharge_relay_Pin);
+		}
+	}
+	
+	#if 0
+	if(GPIO_Pin == MPU6050_INT_Pin) { 
+		printf("6050 exti\n");
+		mpu_dmp_get_data(&pitch,&roll,&yaw);										 //===得到欧拉角（姿态角）的数据
+		MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);								 //===得到陀螺仪数据
+		
+		printf("%f %f %f \n", pitch, roll, yaw);
+	}
+	#endif
+	
+}
+
+
 
 /* 炮弹发射函数 */
 void fire(void)
@@ -170,11 +213,11 @@ void fire(void)
 	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_SET);
   HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_RESET);
 	
-	HAL_Delay(1000); /* 充电时间 */
+	HAL_Delay(2500); /* 充电时间 */
 	
 	/* 放电 */
 	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_RESET);
-	HAL_Delay(10);
+	HAL_Delay(500);
   HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_SET);
 	
 	HAL_Delay(200);

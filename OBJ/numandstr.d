@@ -99,5 +99,8 @@
 ..\obj\numandstr.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\numandstr.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\numandstr.o: ..\HARDWARE\stack\stack.h
+..\obj\numandstr.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\numandstr.o: ..\HARDWARE\IIC\myiic.h
+..\obj\numandstr.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\numandstr.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\numandstr.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

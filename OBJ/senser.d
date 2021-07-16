@@ -99,5 +99,8 @@
 ..\obj\senser.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\senser.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\senser.o: ..\HARDWARE\stack\stack.h
+..\obj\senser.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\senser.o: ..\HARDWARE\IIC\myiic.h
+..\obj\senser.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\senser.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\senser.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

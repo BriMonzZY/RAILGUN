@@ -100,6 +100,9 @@
 ..\obj\lcd.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\lcd.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\lcd.o: ..\HARDWARE\stack\stack.h
+..\obj\lcd.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\lcd.o: ..\HARDWARE\IIC\myiic.h
+..\obj\lcd.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\lcd.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\lcd.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\lcd.o: ..\HARDWARE\LCD\ltdc.h

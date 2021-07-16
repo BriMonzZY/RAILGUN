@@ -100,5 +100,8 @@
 ..\obj\ott2001a.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\ott2001a.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\ott2001a.o: ..\HARDWARE\stack\stack.h
+..\obj\ott2001a.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\ott2001a.o: ..\HARDWARE\IIC\myiic.h
+..\obj\ott2001a.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

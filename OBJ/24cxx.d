@@ -73,4 +73,35 @@
 ..\obj\24cxx.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\obj\24cxx.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\obj\24cxx.o: ..\HARDWARE\IIC\myiic.h
+..\obj\24cxx.o: ..\USER\main.h
+..\obj\24cxx.o: ..\HARDWARE\uart\usart.h
+..\obj\24cxx.o: ..\USER\main.h
+..\obj\24cxx.o: ..\HARDWARE\gpio\gpio.h
 ..\obj\24cxx.o: ..\SYSTEM\delay\delay.h
+..\obj\24cxx.o: ..\HARDWARE\LED\led.h
+..\obj\24cxx.o: ..\HARDWARE\KEY\key.h
+..\obj\24cxx.o: ..\HARDWARE\LCD\lcd.h
+..\obj\24cxx.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\24cxx.o: ..\HARDWARE\SDRAM\sdram.h
+..\obj\24cxx.o: ..\HARDWARE\TOUCH\touch.h
+..\obj\24cxx.o: ..\HARDWARE\TOUCH\ott2001a.h
+..\obj\24cxx.o: ..\HARDWARE\TOUCH\gt9147.h
+..\obj\24cxx.o: ..\HARDWARE\TOUCH\ft5206.h
+..\obj\24cxx.o: ..\HARDWARE\screen app\screen_app.h
+..\obj\24cxx.o: ..\HARDWARE\dma\dma.h
+..\obj\24cxx.o: ..\HARDWARE\uart\uart_dma.h
+..\obj\24cxx.o: ..\HARDWARE\BEEP\beep.h
+..\obj\24cxx.o: ..\HARDWARE\spi\spi.h
+..\obj\24cxx.o: ..\HARDWARE\icm20602\icm20602.h
+..\obj\24cxx.o: ..\HARDWARE\icm20602\attitude_solution.h
+..\obj\24cxx.o: ..\HARDWARE\screen app\status_transmit.h
+..\obj\24cxx.o: ..\HARDWARE\gun_action\gun_action.h
+..\obj\24cxx.o: ..\HARDWARE\Actuator\actuator.h
+..\obj\24cxx.o: ..\HARDWARE\gun_action\tim.h
+..\obj\24cxx.o: ..\HARDWARE\SENSER\senser.h
+..\obj\24cxx.o: ..\HARDWARE\stack\stack.h
+..\obj\24cxx.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\24cxx.o: ..\HARDWARE\IIC\myiic.h
+..\obj\24cxx.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
+..\obj\24cxx.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\24cxx.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h

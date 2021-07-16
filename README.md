@@ -49,9 +49,27 @@ PE3			充电寄存器
 
 
 
+PH2			KEY1
+
+PH3			KEY0
 
 
-actuator.c				PID算法、定时器中断服务函数
+
+PE4			舵机隔离继电器
+
+
+
+PF9			mpu6050	SCL
+
+PE5			mpu6050	SDA
+
+PE6			mpu6050	INT
+
+
+
+
+
+actuator.c				PID算法、定时器中断服务函数、外部中断服务函数
 
 uart_dma.c				uart中断
 
@@ -61,6 +79,14 @@ gun_action				在不同状态下的执行内容、舵机偏转角度函数
 
 
 
+mpu6050dmp和定时器中断冲突，所以不适用dmp，mpu6050用来控制follow模式。
+
+icm20602用来pitch闭环控制。
+
+两个用相同的解算方案。
 
 
-0.35   0.01  0.04
+
+
+
+yawpid   0.35   0.01  0.04

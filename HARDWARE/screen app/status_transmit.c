@@ -12,6 +12,9 @@ void Manual_To_Init(void)
 
 void Init_To_Manual(void)
 {
+
+	
+	
 	LCD_Clear(WHITE);
 	
 	manual_distance = 0;

@@ -99,6 +99,9 @@
 ..\obj\uart_dma.o: ..\HARDWARE\gun_action\tim.h
 ..\obj\uart_dma.o: ..\HARDWARE\SENSER\senser.h
 ..\obj\uart_dma.o: ..\HARDWARE\stack\stack.h
+..\obj\uart_dma.o: ..\HARDWARE\mpu6050\mpu6050.h
+..\obj\uart_dma.o: ..\HARDWARE\IIC\myiic.h
+..\obj\uart_dma.o: ..\HARDWARE\mpu6050\eMPL\inv_mpu.h
 ..\obj\uart_dma.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\uart_dma.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\uart_dma.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
