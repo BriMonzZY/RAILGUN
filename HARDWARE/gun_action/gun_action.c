@@ -30,18 +30,21 @@ void Pitch_Angle(uint8_t angle)
 /* MANUAL模式要执行的动作 */
 void MANUAL_Action(void)
 {
+	sPID_pitch.SetPoint = manual_distance;
 	Yaw_Angle(manual_angle);
+	pitch_Reach_flag = 0;
 	
-	Pitch_Angle(manual_distance);
+	while(pitch_Reach_flag == 0);
 	
+	BEEP_ONCE();
 	
-	HAL_Delay(500);
+	HAL_Delay(800);
 	fire();
-	HAL_Delay(500);
+	HAL_Delay(1000);
 	
-	while(fire_flag == 0);
+	while(fire_flag == 0);	
 	fire_flag = 0;
-	
+	pitch_Reach_flag = 0;
 	Manual_To_Init();
 }
 

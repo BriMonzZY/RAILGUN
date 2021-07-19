@@ -34,6 +34,7 @@ uint8_t temp_usart3;
 enum estaSystem staSystem = INIT;		/* 设置初始状态staSystem为INIT */
 
 PID 		sPID;  /* 定义PID结构体变量 */
+PID			sPID_pitch;  /*  pitch PID  */
 STACK 	distance_stack;
 
 u16 cnt = 0; /* 触摸屏计数 */
@@ -48,14 +49,14 @@ int distance = 0;  /* 实时接收的距离数据 */
 int fire_distance = 0;  /* 发射时候的距离值 */
 int difference = 666;  /* k210传回的目标与中心的差值 */
 
-int pitch_expect = 0;  /* pitch轴角度期望值 */
-int pitch_anle_icm20602 = 0;
+__IO u8 pitch_Reach_flag = 0;  /* 加上volatile修饰防止编译器的优化使得程序卡死在循环中 */
+__IO u16 track_flag = 0;  /* AUTO1追踪模式标志位 */
+__IO u16 follow_flag = 0;  /* 跟随模式标志位 */
+__IO u8 fire_flag = 0;  /* 发射完成标志位 */
 
-u16 track_flag = 0;  /* AUTO1追踪模式标志位 */
 u16 yaw_angle_now = 30; /* 当前的yaw值 */
 u16 pitch_angle_now = 0;  /* 当前的pitch值 */
-u16 follow_flag = 0;  /* 跟随模式标志位 */
-u8 fire_flag = 0;  /* 发射完成标志位 */
+int pitch_anle_icm20602 = 0;
 
 
 /* MPU6050数据 */
@@ -133,6 +134,7 @@ int main(void)
 	
 	/* 初始化MPU6050 */
 	delay_init(180);
+	printf("mpu6050\n");
 	while(MPU_Init());	
 	
 	#if 0
@@ -150,6 +152,12 @@ int main(void)
 	sPID.Kd = 0.04;
 	sPID.SetPoint = 37.0;
 	
+	PIDInit(&sPID_pitch);   /* 初始化PID结构体申请内存 */
+	sPID_pitch.Kp = 0.025;  //0.025
+	sPID_pitch.Ki = 0.0005;                  
+	sPID_pitch.Kd = 0.09;
+	sPID_pitch.SetPoint = 0;  /* pitch初始期望角度为0 */
+	
 	STACKInit(&distance_stack);
 	distance_stack.stack_top = 0;  /* 栈顶索引为0 */
 	
@@ -163,8 +171,19 @@ int main(void)
 	
 	
 	
+	
+	
 	BEEP_ONCE();
 	printf("init finished\n\n");
+	
+	#if 0
+	LCD_Clear(BLACK);
+	u32 color;
+	color=LCD_ReadPoint(10, 10);
+	printf("\n%d\n", color);
+	
+	while(1);
+	#endif
 	
 	
 	/* **********************while(1)*************************** */

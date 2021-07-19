@@ -18,11 +18,13 @@ uint8_t angle_flag = 0;  /* 目标所在的角度 */
 
 
 int judge_difference[10] = {0};  /* 用于判断是否达到标准 */
-
 uint8_t judge_cnt = 0;
 
+int judge_difference_pitch[15] = {0};  /* 用于判断是否达到标准 */
+uint8_t judge_pitch_cnt = 0;
 
-/* PID */
+
+/* 位置式PID */
 double PIDCalc(PID *pp, double NextPoint)   
 {
 	
@@ -40,9 +42,6 @@ double PIDCalc(PID *pp, double NextPoint)
 			+   pp->Kd * dError                     /* 微分项 = 微分常数 * 当前微分 */
 				 );
 }
-
-
-
 
 
 
@@ -110,15 +109,42 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			HAL_UART_Receive_IT(&huart6, temp, 64); 
 			
 			
+			
+			
 			get_icm20602_accdata_spi();
 			get_icm20602_gyro_spi();
 			IMU_quaterToEulerianAngles();  /* 获取欧拉角 */
 			//printf("%.2f,%.2f,%.2f\n", eulerAngle.pitch, eulerAngle.roll, eulerAngle.yaw);
+			if(eulerAngle.roll <=180 && eulerAngle.roll >= 0) {
+				pitch_anle_icm20602 = 180-(int)eulerAngle.roll;
+			}
+			else if(eulerAngle.roll < 0 && eulerAngle.roll >= -180) {
+				pitch_anle_icm20602 = -((int)eulerAngle.roll+180);
+			}
+			//printf("%d\n", pitch_anle_icm20602);
+				
 			
-			printf("%f \n", 180-eulerAngle.roll);
 			
-			yaw_angle_now += PIDCalc(&sPID, pitch_angle_now-pitch_expect);
-			Pitch_Angle(pitch_angle_now);
+			if(pitch_Reach_flag == 0) {	
+				pitch_angle_now += PIDCalc(&sPID_pitch, pitch_anle_icm20602);
+				Pitch_Angle(pitch_angle_now);
+			}	
+			
+				
+				
+				
+			/* 如果15次差值都在4以内就停止 */
+			judge_difference_pitch[judge_pitch_cnt++] = pitch_anle_icm20602;
+			if(judge_pitch_cnt == 15) judge_pitch_cnt = 0;
+			for(i = 0; i < 15; i++) {
+				if(!(judge_difference_pitch[i] >= sPID_pitch.SetPoint-4 && judge_difference_pitch[i] <= sPID_pitch.SetPoint+4)) break;
+				if(i == 14) pitch_Reach_flag = 1;
+			}
+				
+			
+			
+			
+			
 			
 			
 		}
@@ -210,10 +236,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 /* 炮弹发射函数 */
 void fire(void)
 {
+	/* 归位保护 */
+	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_RESET);
+	
 	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_SET);
   HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_RESET);
 	
-	HAL_Delay(2500); /* 充电时间 */
+	HAL_Delay(3500); /* 充电时间 */
 	
 	/* 放电 */
 	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_RESET);

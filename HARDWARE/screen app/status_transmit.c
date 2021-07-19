@@ -6,6 +6,7 @@ void Manual_To_Init(void)
 	LCD_Clear(WHITE);
 	Yaw_Angle(30);
 	Pitch_Angle(0);
+	sPID_pitch.SetPoint = 0;  /* ½Ç¶ÈÎª0 */
 	staSystem = INIT;
 }
 
@@ -93,11 +94,7 @@ void Init_To_Manual(void)
 	
 	LCD_ShowString(230,60,120,120,24,"du");
 	LCD_ShowString(230,90,120,120,24,"mm");
-	
-	/* DEBUG */
-//	HAL_GPIO_WritePin(Charging_relay_GPIO_Port,Charging_relay_Pin,GPIO_PIN_SET);
-//  HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_RESET);
-	
+
 }
 
 
@@ -151,7 +148,7 @@ void Auto1_To_Init(void)
 	Yaw_Angle(30);
 	Pitch_Angle(0);
 	yaw_angle_now = 30;
-	
+	sPID_pitch.SetPoint = 0;
 	track_flag = 0;
 }
 
@@ -161,6 +158,7 @@ void Auto2_To_Init(void)
 	staSystem = INIT;
 	Yaw_Angle(30);
 	Pitch_Angle(0);
+	sPID_pitch.SetPoint = 0;
 	tim_angle = 0;
 	yaw_angle_now=30;
 }
@@ -172,5 +170,6 @@ void Follow_To_Init(void)
 	follow_flag = 0;
 	Yaw_Angle(30);
 	Pitch_Angle(0);
+	sPID_pitch.SetPoint = 0;
 	yaw_angle_now = 30;
 }

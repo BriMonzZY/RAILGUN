@@ -104,17 +104,18 @@ extern long long manual_distance;
 extern long long manual_angle;
 extern int difference;
 extern int tim_angle;
-extern u16 track_flag;
+extern __IO u16 track_flag;
 extern PID sPID;
+extern PID sPID_pitch;  /*  pitch PID  */
 extern STACK 	distance_stack;
 extern u16 yaw_angle_now;
 extern u16 pitch_angle_now;
 extern int distance;
 extern int fire_distance;
-extern u8 fire_flag;
-extern u16 follow_flag;
+extern __IO u8 fire_flag;
+extern __IO u16 follow_flag;
 
-extern int pitch_expect;  /* pitch轴角度期望值 */
+extern __IO u8 pitch_Reach_flag;
 extern int pitch_anle_icm20602;
 
 extern unsigned char temp[64];  /* 超声波测距 */

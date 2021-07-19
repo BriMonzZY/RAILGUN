@@ -157,50 +157,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>159</LineNumber>
+          <LineNumber>333</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134274284</Address>
+          <Address>134274648</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>D:\_杞欢椤圭洰\鐢佃禌鍑嗗\RAILGUN\USER\main.c</Filename>
+          <Filename>D:\_杞欢椤圭洰\鐢佃禌鍑嗗\RAILGUN\HARDWARE\screen app\screen_app.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\TOUCH\main.c\159</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>184</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134274312</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>D:\_杞欢椤圭洰\鐢佃禌鍑嗗\RAILGUN\USER\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\TOUCH\main.c\184</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>112</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134233442</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>D:\_杞欢椤圭洰\鐢佃禌鍑嗗\RAILGUN\HARDWARE\Actuator\actuator.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\TOUCH\../HARDWARE/Actuator/actuator.c\112</Expression>
+          <Expression>\\TOUCH\../HARDWARE/screen app/screen_app.c\333</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -223,6 +191,26 @@
           <count>3</count>
           <WinNumber>1</WinNumber>
           <ItemText>st.chip_cfg.sensors</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pitch_Reach_flag,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>sPID_pitch.SetPoint,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>manual_angle,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pitch_angle_now,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
