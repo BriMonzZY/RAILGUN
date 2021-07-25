@@ -1,3 +1,7 @@
+# 模拟电磁曲射炮
+
+## 接口定义
+
 PB10			UART3_TX
 PB11			UART3_RX
 
@@ -67,23 +71,29 @@ PE6			mpu6050	INT
 
 
 
+## 文件内容
+
+actuator.c				位置式PID算法、定时器中断服务函数、外部中断服务函数
+
+uart_dma.c			  uart中断，处理k210传回的数据。激光测距的数据解算代码
+
+gun_action.c			在不同状态下的执行内容、舵机偏转角度函数。
+
+status_transmit.c	状态转移函数
+
+stack.c						用数组实现的栈
+
+attitude_solution.c	陀螺仪数据融合(姿态解算)算法(使用互补滤波算法)
 
 
-actuator.c				PID算法、定时器中断服务函数、外部中断服务函数
 
-uart_dma.c				uart中断
-
-gun_action				在不同状态下的执行内容、舵机偏转角度函数
-
-
-
-
+## NOTE
 
 mpu6050dmp和定时器中断冲突，所以不适用dmp，mpu6050用来控制follow模式。
 
-icm20602用来pitch闭环控制。
+icm20602用来pitch闭环控制（放弃）。
 
-两个用相同的解算方案。
+两个陀螺仪使用相同的解算方案。
 
 
 

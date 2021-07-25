@@ -152,35 +152,30 @@ int main(void)
 	
 	
 	/* 使用MPU6050dmp */
-	#if 0
+#if 0
 	while(mpu_dmp_init()){
 		printf("MPU6050 Error!!!\r\n");
 		delay_ms(500);
 	}
-	#endif
+#endif
 	
 	printf("MPU6050 OK\r\n");
 	
 	/* Yaw追踪闭环控制 */
 	PIDInit(&sPID);   /* 初始化PID结构体申请内存 */
-//	sPID.Kp = 0.035;
-//	sPID.Ki = 0.001;                  
-//	sPID.Kd = 0.04;
-//	sPID.SetPoint = 0;
-	
 	sPID.Kp = 0.025;  //0.023
 	sPID.Ki = 0.0008;  //0.0008         
 	sPID.Kd = 0.035;   //0.035
 	sPID.SetPoint = 30;
 	
 	/* Pitch闭环控制 */
-	#if 0
+#if 0
 		PIDInit(&sPID_pitch);   /* 初始化PID结构体申请内存 */
 		sPID_pitch.Kp = 0.035;
 		sPID_pitch.Ki = 0.001;                  
 		sPID_pitch.Kd = 0.04;
 		sPID_pitch.SetPoint = 30;
-	#endif
+#endif
 	
 	/* 串口接收数据栈 */
 	STACKInit(&distance_stack);
@@ -203,7 +198,7 @@ int main(void)
 	/* **********************while(1)*************************** */
 	while(1) {
 		
-#if 0    /* 使用DMP和定时器中断冲突 */
+#if 0    /* 使用DMP和定时器中断冲突，所以放弃使用dmp */
 		if(mpu_dmp_get_data(&pitch,&roll,&yaw)==0)
 		{
 			printf("%f %f %f\n", pitch, roll, yaw);
