@@ -118,7 +118,7 @@ extern __IO u16 follow_flag;
 extern __IO u8 pitch_Reach_flag;
 extern int pitch_anle_icm20602;
 
-extern unsigned char temp[64];  /* 超声波测距 */
+extern unsigned char temp_uart6[64];  /* 激光测距 */
 /* extern unsigned char CMD_5[8]; */
 
 extern float pitch,roll,yaw; 		//欧拉角
@@ -126,6 +126,8 @@ extern short aacx,aacy,aacz;		//加速度传感器原始数据
 extern short gyrox,gyroy,gyroz;	//陀螺仪原始数据
 extern short temperature;					//温度
 
+
+extern double angle_distance_48v_45v[60][3];
 
 #endif
 

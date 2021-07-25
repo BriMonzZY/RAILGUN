@@ -6,6 +6,6 @@
 
 extern uint8_t xiangzuo;
 
-void fire(void);
+void fire(u8 voltage);
 
 #endif

@@ -26,6 +26,7 @@ uint8_t StartUartRxDMA(void);								//接收DMA初始化
 uint8_t StartUartTxDMA(void);								//不需要自己调用
 void ProcessData(void);										//在里面添加数据处理函数
 void HAL_UART_IdleCallback(UART_HandleTypeDef *huart);	//到USARTx_IRQHandler中添加
+void Distance_Process(void);
 
 #endif /* UART_DMA_UART_DMA_H_ */
 

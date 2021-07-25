@@ -9,6 +9,6 @@ void MANUAL_Action(void);
 void FOLLOW_Action(void);
 
 void Yaw_Angle(int angle);
-void Pitch_Angle(uint8_t angle);
+void Pitch_Angle(int angle);
 
 #endif

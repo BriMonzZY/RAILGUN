@@ -22,7 +22,9 @@ void BEEP_Init(void)
 
 void BEEP_ONCE(void)
 {
-  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_RESET);		//蜂鸣器对应引脚PC1拉低，
-	HAL_Delay(50);
-  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_SET);
+	#if 1
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_RESET);		//蜂鸣器对应引脚PC1拉低，
+		HAL_Delay(50);
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_SET);
+	#endif
 }

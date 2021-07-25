@@ -4,9 +4,8 @@
 void Manual_To_Init(void)
 {
 	LCD_Clear(WHITE);
-	Yaw_Angle(30);
-	Pitch_Angle(0);
-	sPID_pitch.SetPoint = 0;  /* 角度为0 */
+	Yaw_Angle(30);		/* Yaw 30° */
+	Pitch_Angle(0);   /* Pitch 0° */
 	staSystem = INIT;
 }
 
@@ -14,14 +13,12 @@ void Manual_To_Init(void)
 void Init_To_Manual(void)
 {
 
-	
-	
 	LCD_Clear(WHITE);
 	
 	manual_distance = 0;
 	manual_angle = 0;
 	
-	
+	/* 绘制界面 */
 	
 	/* DISTANCE */
 	POINT_COLOR=BLUE;
@@ -95,6 +92,8 @@ void Init_To_Manual(void)
 	LCD_ShowString(230,60,120,120,24,"du");
 	LCD_ShowString(230,90,120,120,24,"mm");
 
+
+	Pitch_Angle(20);
 }
 
 
@@ -109,7 +108,7 @@ void Init_To_Auto1(void)
 	LCD_ShowString(100,440,200,120,24,"back to init");
 	
 	track_flag = 1;  /* 开启目标追踪 */
-	
+	Pitch_Angle(20);
 }
 
 void Init_To_Auto2(void)
@@ -126,6 +125,7 @@ void Init_To_Auto2(void)
 	
 	yaw_angle_now = 0;
 	
+	Pitch_Angle(20);
 }
 
 void Init_To_Follow(void)
@@ -148,7 +148,6 @@ void Auto1_To_Init(void)
 	Yaw_Angle(30);
 	Pitch_Angle(0);
 	yaw_angle_now = 30;
-	sPID_pitch.SetPoint = 0;
 	track_flag = 0;
 }
 
@@ -158,9 +157,9 @@ void Auto2_To_Init(void)
 	staSystem = INIT;
 	Yaw_Angle(30);
 	Pitch_Angle(0);
-	sPID_pitch.SetPoint = 0;
 	tim_angle = 0;
 	yaw_angle_now=30;
+	HAL_GPIO_WritePin(Discharge_relay_GPIO_Port,Discharge_relay_Pin,GPIO_PIN_RESET);
 }
 
 void Follow_To_Init(void)
@@ -170,6 +169,5 @@ void Follow_To_Init(void)
 	follow_flag = 0;
 	Yaw_Angle(30);
 	Pitch_Angle(0);
-	sPID_pitch.SetPoint = 0;
 	yaw_angle_now = 30;
 }

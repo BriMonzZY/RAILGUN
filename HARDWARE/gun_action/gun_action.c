@@ -11,6 +11,8 @@ extern u16 get_distance_flag;
 */
 void Yaw_Angle(int angle)
 {
+	angle = angle-6;
+	
 	if(angle >= 60) angle = 60;
 	if(angle <= 0) angle = 0;
 	
@@ -18,8 +20,10 @@ void Yaw_Angle(int angle)
 }
 
 /* 俯仰角 */
-void Pitch_Angle(uint8_t angle)
+void Pitch_Angle(int angle)
 {
+	angle = angle-5;   /* (角度-舵机打角差值+炮管角度差值(激光水平时角度值)) */
+	
 	if(angle >= 60) angle = 60;
 	if(angle <= 0) angle = 0;
 	
@@ -30,18 +34,41 @@ void Pitch_Angle(uint8_t angle)
 /* MANUAL模式要执行的动作 */
 void MANUAL_Action(void)
 {
-	sPID_pitch.SetPoint = manual_distance;
-	Yaw_Angle(manual_angle);
-	pitch_Reach_flag = 0;
+	u8 i, min_dif_index;
+	float min_dif;  /* 距离和表中的差值的最小值 */
 	
-	while(pitch_Reach_flag == 0);
+	
+	Yaw_Angle(manual_angle);
+	
+	
+	/* 寻找最适合的发射角度和电压 */
+	min_dif = abs(angle_distance_48v_45v[0][0]*1000 - manual_distance);
+	min_dif_index = 0;
+	for(i = 0; i <= 34; i++) {
+		if(abs(angle_distance_48v_45v[i][0]*1000 - manual_distance) <= min_dif) {
+			min_dif_index = i;
+			min_dif = abs(angle_distance_48v_45v[i][0]*1000 - manual_distance);
+		}
+	}
+	printf("distance: %f  angle: %f  voltage: %f\n", angle_distance_48v_45v[min_dif_index][0], angle_distance_48v_45v[min_dif_index][1], angle_distance_48v_45v[min_dif_index][2]);
+	
+	
+	/* Pitch转到对应角度 */
+	Pitch_Angle(angle_distance_48v_45v[min_dif_index][1]);
+	
+	/* 如果第一次角度不符合要求就再来一次 */
+	HAL_Delay(1000);  
+	if(!(pitch_anle_icm20602 >= angle_distance_48v_45v[min_dif_index][1]-5 && pitch_anle_icm20602 <= angle_distance_48v_45v[min_dif_index][1]+5)) {
+		Pitch_Angle(0);
+		HAL_Delay(1000);
+		Pitch_Angle(angle_distance_48v_45v[min_dif_index][1]);
+	}
+	
 	
 	BEEP_ONCE();
-	
 	HAL_Delay(800);
-	fire();
+	fire(angle_distance_48v_45v[min_dif_index][2]);  /* 发射 */
 	HAL_Delay(1000);
-	
 	while(fire_flag == 0);	
 	fire_flag = 0;
 	pitch_Reach_flag = 0;
@@ -53,6 +80,8 @@ void MANUAL_Action(void)
 /* AUTO1模式要执行的动作 */
 void AUTO1_Action(void)
 {
+	u8 min_dif_index;
+	float min_dif;  /* 距离和表中的差值的最小值 */
 	
 	HAL_Delay(20);
 	/* track_flag等于0代表找到目标  测距    发射 */
@@ -60,32 +89,33 @@ void AUTO1_Action(void)
 		
 		fire_distance = 0;
 		u8 i;
-		u8 effect_cnt = 0; /* 有效的个数 */
-		for(i = 0; i < 4; i++) {
-			if(distance_aver[i] != 0 && distance_aver[i] <= 3500) {
-				effect_cnt++;
-				fire_distance += distance_aver[i];
-			}				
-		}
-		fire_distance /= effect_cnt;
+		Distance_Process();
+		fire_distance= distance - 250;
 		
-		
-		HAL_Delay(20);  /* 等待 */
-		
+		/* 等待 */
+		HAL_Delay(20);  
 		printf("distance: %d\n", fire_distance);
-		BEEP_ONCE();
 		
-		fire();/* 充电 发射 */
+		/* 寻找最适合的发射角度和电压 */
+		min_dif = abs(angle_distance_48v_45v[0][0]*1000 - fire_distance);
+		min_dif_index = 0;
+		for(i = 0; i <= 34; i++) {
+			if(abs(angle_distance_48v_45v[i][0]*1000 - fire_distance) <= min_dif) {
+				min_dif_index = i;
+				min_dif = abs(angle_distance_48v_45v[i][0]*1000 - fire_distance);
+			}
+		}
+		printf("distance: %f  angle: %f  voltage: %f\n", angle_distance_48v_45v[min_dif_index][0], angle_distance_48v_45v[min_dif_index][1], angle_distance_48v_45v[min_dif_index][2]);
+		
+		BEEP_ONCE();
+		fire(angle_distance_48v_45v[min_dif_index][1]);/* 充电 发射 */
 		/* 发射完成后转到init */
-		while(1);
 		while(fire_flag == 0);
 		staSystem = INIT;
 		HAL_Delay(100);
 		Auto1_To_Init();
 		fire_flag = 0;
 	}
-	
-	
 }
 
 
