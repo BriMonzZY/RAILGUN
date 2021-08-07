@@ -100,3 +100,13 @@ icm20602用来pitch闭环控制（放弃）。
 
 
 yawpid   0.35   0.01  0.04
+
+
+
+## Picture
+
+<img src="https://gitee.com/BriMon-zZY/blog-image/raw/master/img/202108072118248.jpg" alt="img" style="zoom: 33%;" />
+
+
+
+<img src="https://gitee.com/BriMon-zZY/blog-image/raw/master/img/202108072119924.jpg" alt="img" style="zoom:33%;" />
